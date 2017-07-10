@@ -1,5 +1,4 @@
-require './bot_commands'
-require './bot_replies'
+require './bot_instructions'
 require './reminder'
 
 class ReminderHelper
@@ -7,12 +6,12 @@ class ReminderHelper
 
   def initialize
     @reminders = Hash.new([])
-    @last_chat_commands = Hash.new(BotCommands::HELP)
+    @last_chat_commands = Hash.new(BotInstructions.commands['help'])
   end
 
   def update_chat_reminders(message)
     @reminders[message.chat.id] << Reminder.new(message)
-    BotReplies::REMINDER_SAVED
+    BotInstructions.replies['reminder_saved']
   end
 
   def update_last_chat_command(message)
@@ -33,16 +32,16 @@ class ReminderHelper
 
   def remove_last_reminder(message)
     @reminders[message.chat.id].pop
-    BotReplies::REMINDER_REMOVED
+    BotInstructions.replies['reminder_removed']
   end
 
   def remove_first_reminder(message)
     @reminders[message.chat.id].shift
-    BotReplies::REMINDER_REMOVED
+    BotInstructions.replies['reminder_removed']
   end
 
   def remove_all_reminders(message)
     @reminders[message.chat.id] = []
-    BotReplies::REMINDERS_CLEAR
+    BotInstructions.replies['reminders_clear']
   end
 end

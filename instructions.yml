@@ -1,0 +1,17 @@
+replies:
+  reminder_saved: 'Saved!'
+  reminder_removed: 'Removed!'
+  reminders_clear: 'All reminders were removed!'
+  help: 'Comming soon!'
+  reminder_ask: 'Enter message or send image'
+  no_reminders: 'There are no reminders!'
+
+commands:
+  save: '/save'
+  list: '/list'
+  show_first: '/first'
+  show_last: '/last'
+  first_done: '/first_done'
+  last_done: '/last_done'
+  clear: '/clear'
+  help: '/help'
