@@ -76,3 +76,4 @@ Telegram::Bot::Client.run(token) do |bot|
     reminders_helper.update_last_chat_command(message)
   end
 end
+

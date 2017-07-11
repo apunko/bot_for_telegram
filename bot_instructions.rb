@@ -13,3 +13,4 @@ module BotInstructions
     instructions['commands']
   end
 end
+
