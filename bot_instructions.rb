@@ -1,11 +1,15 @@
-class BotInstructions
-  @@instructions = YAML.load_file('instructions.yml')
+module BotInstructions
+  extend self
 
-  def self.replies
-    @@instructions['replies']
+  def instructions
+    @instructions ||= YAML.load_file('instructions.yml')
   end
 
-  def self.commands
-    @@instructions['commands']
+  def replies
+    instructions['replies']
+  end
+
+  def commands
+    instructions['commands']
   end
 end

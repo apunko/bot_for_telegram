@@ -2,7 +2,7 @@ replies:
   reminder_saved: 'Saved!'
   reminder_removed: 'Removed!'
   reminders_clear: 'All reminders were removed!'
-  help: 'Comming soon!'
+  help: 'Coming soon!'
   reminder_ask: 'Enter message or send image'
   no_reminders: 'There are no reminders!'
 
